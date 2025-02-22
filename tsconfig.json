@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
+    "target": "ES2018",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": false,
-    "target": "ES2018",
-    "moduleResolution": "node",
-    "types": ["node", "mysql2"]
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   }
 }

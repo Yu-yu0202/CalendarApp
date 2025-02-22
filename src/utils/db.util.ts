@@ -1,4 +1,6 @@
 import { Database } from '../types/db';
+// @ts-ignore
+import mysql from "mysql2/promise";
 
 export class DatabaseUtil implements Database {
   connection: mysql.Connection;

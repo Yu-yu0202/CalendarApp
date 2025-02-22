@@ -14,7 +14,11 @@
   "author": "Yu-yu0202",
   "type": "commonjs",
   "main": "dist/server.js",
-  "scripts": {},
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "clean": "rmdir /s /q dist"
+  },
   "dependencies": {
     "@types/jsonwebtoken": "^9.0.8",
     "@types/node": "^22.13.5",
@@ -35,6 +39,7 @@
     "eslint-plugin-import": "^2.31.0",
     "prettier": "^3.5.1"
   },
+
   "eslintConfig": {
     "root": true,
     "env": {

@@ -1,5 +1,5 @@
 import { Database } from '../types/db';
-import { DatabaseUtil } from '../utils/db.util';
+import { AuthService } from '../auth/auth.service';
 
 export class AdminController {
   private db: Database;
@@ -21,5 +21,22 @@ export class AdminController {
       [userId]
     );
     return result?.is_admin || false;
+  }
+
+  async login(req: { username: string; password: string }): Promise<string> {
+    const passwordHash = await this.getAdminPassword();
+    if (!passwordHash) {
+      throw new Error('Admin account not found');
+    }
+
+    const isValid = await AuthService.compare(passwordHash, req.password);
+    if (!isValid) {
+      throw new Error('Invalid credentials');
+    }
+
+    return AuthService.generateToken({
+      id: req.username,
+      isAdmin: true
+    });
   }
 }

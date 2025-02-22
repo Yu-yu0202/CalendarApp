@@ -1,7 +1,5 @@
-require('dotenv').config()
+import * as bcrypt from 'bcryptjs';
 import {sign, verify} from 'jsonwebtoken';
-// @ts-ignore
-import bcrypt from 'bcryptjs';
 
 interface TokenPayload {
   userId: string;
@@ -30,5 +28,14 @@ export class AuthService {
       isAdmin: user.isAdmin
     };
     return sign(payload, this.JWT_SECRET, { expiresIn: '1h' });
+  }
+
+  static async compare(password: string, hash: string): Promise<boolean> {
+    try {
+      return await bcrypt.compare(password, hash);
+    } catch (error) {
+      console.error('パスワード検証エラー:', error);
+      throw error;
+    }
   }
 }
