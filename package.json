@@ -1,0 +1,19 @@
+{
+  "name": "calendarapp",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Yu-yu0202/CalendarApp#readme",
+  "bugs": {
+    "url": "https://github.com/Yu-yu0202/CalendarApp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yu-yu0202/CalendarApp.git"
+  },
+  "license": "ISC",
+  "author": "Yu-yu0202",
+  "type": "commonjs",
+  "main": "dist/server.js",
+  "scripts": {
+  }
+}
