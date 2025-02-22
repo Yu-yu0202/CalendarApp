@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": false,
+    "target": "ES2018",
+    "moduleResolution": "node",
+    "types": ["node", "mysql2"]
+  }
+}

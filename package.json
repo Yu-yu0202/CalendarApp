@@ -10,10 +10,68 @@
     "type": "git",
     "url": "git+https://github.com/Yu-yu0202/CalendarApp.git"
   },
-  "license": "ISC",
+  "license": "BSD-3-Clause",
   "author": "Yu-yu0202",
   "type": "commonjs",
   "main": "dist/server.js",
-  "scripts": {
+  "scripts": {},
+  "dependencies": {
+    "@types/jsonwebtoken": "^9.0.8",
+    "@types/node": "^22.13.5",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.12.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/express": "^5.0.0",
+    "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-import": "^2.31.0",
+    "prettier": "^3.5.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "es2023": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:import/recommended",
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "import"
+    ],
+    "rules": {
+      "no-unused-vars": "warn",
+      "import/order": [
+        "error",
+        {
+          "groups": [
+            "builtin",
+            "external",
+            "internal"
+          ],
+          "newlines-between": "always"
+        }
+      ]
+    },
+    "ignorePatterns": [
+      "node_modules/",
+      "dist/",
+      "build/",
+      "src/*"
+    ]
   }
 }
