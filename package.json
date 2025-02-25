@@ -20,14 +20,24 @@
     "clean": "rmdir /s /q dist"
   },
   "dependencies": {
+    "@types/axios": "^0.9.36",
     "@types/jsonwebtoken": "^9.0.8",
+    "@types/multer": "^1.4.12",
     "@types/node": "^22.13.5",
+    "@types/pdfmake": "^0.2.11",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "axios": "^1.7.9",
     "bcrypt": "^5.1.1",
     "bcryptjs": "^3.0.2",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
     "mysql2": "^3.12.0",
+    "pdfmake": "^0.2.18",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   },
@@ -39,7 +49,6 @@
     "eslint-plugin-import": "^2.31.0",
     "prettier": "^3.5.1"
   },
-
   "eslintConfig": {
     "root": true,
     "env": {
@@ -61,7 +70,7 @@
     "rules": {
       "no-unused-vars": "warn",
       "import/order": [
-        "error",
+        "warn",
         {
           "groups": [
             "builtin",

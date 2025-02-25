@@ -1,0 +1,19 @@
+/* public/admin/styles.css */
+.admin-panel {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.holiday-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.holiday-item {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
