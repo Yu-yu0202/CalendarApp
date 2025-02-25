@@ -1,3 +1,7 @@
 node_modules/*
 .env
 dist/*
+*.zip
+*.tar.gz
+*.tgz
+*.7z
