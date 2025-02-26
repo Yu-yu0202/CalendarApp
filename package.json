@@ -1,0 +1,76 @@
+{
+  "name": "calendarapp",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Yu-yu0202/CalendarApp#readme",
+  "bugs": {
+    "url": "https://github.com/Yu-yu0202/CalendarApp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yu-yu0202/CalendarApp.git"
+  },
+  "license": "BSD-3-Clause",
+  "author": "Yu-yu0202",
+  "type": "commonjs",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.7.3",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.5",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "es2023": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:import/recommended",
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "import"
+    ],
+    "rules": {
+      "no-unused-vars": "warn",
+      "import/order": [
+        "warn",
+        {
+          "groups": [
+            "builtin",
+            "external",
+            "internal"
+          ],
+          "newlines-between": "always"
+        }
+      ]
+    },
+    "ignorePatterns": [
+      "node_modules/",
+      "dist/",
+      "build/",
+      "src/*"
+    ]
+  }
+}
