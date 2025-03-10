@@ -15,22 +15,14 @@
   "type": "commonjs",
   "main": "dist/server.js",
   "scripts": {
-    "test": "exit 0"
+    "start:server": "cd server && npm start",
+    "start:client": "cd client && npm start",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev"
   },
   "dependencies": {
-    "bcryptjs": "^3.0.2",
-    "express": "^4.21.2",
-    "mysql2": "^3.12.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "typescript": "^5.7.3",
-    "uuid": "^11.1.0"
   },
   "devDependencies": {
-    "@types/express": "^5.0.0",
-    "@types/node": "^22.13.5",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
     "nodemon": "^3.1.9",
     "ts-node": "^10.9.2"
   },
@@ -70,7 +62,7 @@
       "node_modules/",
       "dist/",
       "build/",
-      "src/*"
+      "src/"
     ]
   }
 }
