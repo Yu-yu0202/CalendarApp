@@ -3,6 +3,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import mysql from 'mysql2/promise';
 import dotenv from 'dotenv';
+import bcrypt from 'bcryptjs'
 
 // モデルのインポート
 import { UserModel } from './models/user.model';
@@ -83,7 +84,6 @@ const initApp = async () => {
 
     if (!admin) {
       const adminPassword = process.env.ADMIN_PASSWORD || 'admin123';
-      const bcrypt = await import('bcrypt');
       const hashedPassword = await bcrypt.default.hash(adminPassword, 10);
       await userModel.create(adminUsername, hashedPassword, true);
       console.log(`初期管理者ユーザーが作成されました: ${adminUsername}`);

@@ -5,3 +5,4 @@ dist/*
 *.tar.gz
 *.tgz
 *.7z
+**/node_modules/*
